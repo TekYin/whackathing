@@ -11,6 +11,7 @@ game.module(
 .body(function(){
 
 game.System.orientation = game.System.LANDSCAPE;
+game.Storage.id = 'net.pandajs.whackathing';
 
 game.start();
 
