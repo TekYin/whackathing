@@ -22,16 +22,16 @@ game.addAsset('media/gameover.png');
 game.addAsset('media/logo.png');
 game.addAsset('media/ready.png');
 
-game.addSound('media/sound/hit.m4a', 'hit');
-game.addSound('media/sound/score.m4a', 'score');
-game.addSound('media/sound/spawn1.m4a', 'spawn1');
-game.addSound('media/sound/spawn2.m4a', 'spawn2');
-game.addSound('media/sound/spawn3.m4a', 'spawn3');
-game.addSound('media/sound/spawn4.m4a', 'spawn4');
-game.addSound('media/sound/spawn5.m4a', 'spawn5');
-game.addSound('media/sound/highscore.m4a', 'highscore');
-game.addSound('media/sound/miss.m4a', 'miss');
+game.addAudio('media/sound/hit.m4a', 'hit');
+game.addAudio('media/sound/score.m4a', 'score');
+game.addAudio('media/sound/spawn1.m4a', 'spawn1');
+game.addAudio('media/sound/spawn2.m4a', 'spawn2');
+game.addAudio('media/sound/spawn3.m4a', 'spawn3');
+game.addAudio('media/sound/spawn4.m4a', 'spawn4');
+game.addAudio('media/sound/spawn5.m4a', 'spawn5');
+game.addAudio('media/sound/highscore.m4a', 'highscore');
+game.addAudio('media/sound/miss.m4a', 'miss');
 
-game.addMusic('media/sound/music.m4a', 'music');
+game.addAudio('media/sound/music.m4a', 'music');
 
 });

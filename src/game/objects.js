@@ -62,7 +62,7 @@ Monster = game.Sprite.extend({
     },
 
     reset: function() {
-        game.sound.playSound('spawn' + this.id);
+        game.audio.playSound('spawn' + this.id);
         var image = 'media/monster' + Math.round(game.Math.random(1, 5)) + '.png';
         this.timer.reset();
         this.scale.x = Math.random() > 0.5 ? 1 : -1;
@@ -70,7 +70,7 @@ Monster = game.Sprite.extend({
     },
 
     emit: function() {
-        game.sound.playSound('hit');
+        game.audio.playSound('hit');
         game.scene.emitter.position.x = this.position.x;
         game.scene.emitter.emit(10);
         this.bounce();

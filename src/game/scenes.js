@@ -107,8 +107,8 @@ SceneGame = game.Scene.extend({
     gameOver: function() {
         this.missLayer.interactive = false;
         this.monsters[0].gameOver();
-        game.sound.musicVolume = 0.5;
-        game.sound.playMusic('music');
+        game.audio.musicVolume = 0.5;
+        game.audio.playMusic('music');
 
         var text = new game.Sprite(game.system.width / 2, 250, 'media/gameover.png', {anchor: {x:0.5, y:0.5}});
         this.addTween(text.position, {y: text.position.y + 50}, 1000, {
@@ -121,7 +121,7 @@ SceneGame = game.Scene.extend({
             anchor: {x:0.5, y:0.5},
             interactive: true,
             mousedown: function() {
-                game.sound.stopMusic();
+                game.audio.stopMusic();
                 game.system.setScene(SceneGame);
             }
         });
@@ -139,13 +139,13 @@ SceneGame = game.Scene.extend({
             text.position.x = game.system.width / 2 - text.textWidth / 2;
             text.position.y = 40 + 16;
             this.stage.addChild(text);
-            game.sound.playSound('highscore');
+            game.audio.playSound('highscore');
         }
     },
 
     addScore: function(score, x, y) {
-        if(score > 0) game.sound.playSound('score');
-        else game.sound.playSound('miss');
+        if(score > 0) game.audio.playSound('score');
+        else game.audio.playSound('miss');
 
         var text = new game.BitmapText(score.toString(), {font: 'Pixel'});
         text.position.x = x - text.textWidth / 2;
